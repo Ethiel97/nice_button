@@ -1,8 +1,8 @@
 name: nice_button
 description: A flutter package to design nice buttons
 version: 0.0.1
-author: Ethiel ADIASSA<https://twitter.com/enthusiastDev
-homepage:
+author: Ethiel ADIASSA<https://twitter.com/enthusiastDev>
+homepage: https://github.com/Ethiel97/nice_button
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
