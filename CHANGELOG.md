@@ -9,3 +9,7 @@
 ## [0.1.2]
 
  - Update the documentation and some minor changes
+
+ ## [0.1.3]
+
+ - Update package description to provide more info
