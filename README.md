@@ -1,8 +1,8 @@
 # nice_button
 
-[Get the package](https://pub.dartlang.org/packages/nice_button)
+![Pub](https://img.shields.io/pub/v/nice_button.svg)
 
-A Flutter package for Android and IOS to design nice buttons with no hassle in your app
+A Flutter package for Android and IOS to design nice buttons with no hassle in your app. Enjoy !
 
 ## Installation
 
