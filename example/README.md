@@ -1,16 +1,89 @@
-# example
+# A Complete Example
 
 A new Flutter project.
+```dart
+import 'package:flutter/material.dart';
+import 'package:nice_button/NiceButton.dart';
 
-## Getting Started
+void main() => runApp(new MyApp());
 
-This project is a starting point for a Flutter application.
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Nice Button Demo',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
 
-A few resources to get you started if this is your first Flutter project:
+class MyHomePage extends StatefulWidget {
+  @override
+  MyHomePageState createState() {
+    return new MyHomePageState();
+  }
+}
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: firstColor,
+        title: new Text('Nice Button Demo'),
+      ),
+      body: new Material(
+        child: new Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                NiceButton(
+                  width: 255,
+                  elevation: 8.0,
+                  radius: 52.0,
+                  text: "Login",
+                  background: firstColor,
+                  onPressed: () {
+                    print("hello");
+                  },
+                ),
+                NiceButton(
+                  mini: true,
+                  icon: Icons.home,
+                  background: firstColor,
+                  onPressed: () {
+                    print("hello");
+                  },
+                ),
+                NiceButton(
+                  elevation: 5,
+                  mini: true,
+                  icon: Icons.label,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {},
+                ),
+                NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+                  text: "Register",
+                  icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {},
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```

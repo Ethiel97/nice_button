@@ -1,14 +1,73 @@
 # nice_button
 
-A flutter package to design nice buttons
+[Get the package](https://pub.dartlang.org/packages/nice_button)
 
-## Getting Started
+A Flutter package to design nice buttons in Flutter
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Installation
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Add the following to pubspec.yaml
+```yaml
+dependencies:
+  ...
+  nice_button: ^0.0.1
+```
+
+## Usage Example
+
+import nice_button.dart
+
+```dart
+import 'package:nice_button/NiceButton.dart';
+```
+
+### For normal buttons
+
+```dart
+NiceButton(
+    width: 255,
+    elevation: 8.0,
+    radius: 52.0,
+    text: "Login",
+    background: firstColor,
+    onPressed: () {
+        print("hello");
+        },
+    ),
+```
+
+### For mini buttons
+
+Icon is required in this case
+
+```dart
+NiceButton(
+    mini: true,
+    icon: Icons.home,
+    background: firstColor,
+    onPressed: () {
+        print("hello");
+    },
+    )
+```
+
+
+### For gradient buttons
+
+```dart
+var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
+
+NiceButton(
+    radius: 40,
+    padding: const EdgeInsets.all(15),
+    text: "Register",
+    icon: Icons.account_box,
+    gradientColors: [secondColor, firstColor],
+    onPressed: () {},
+    )
+```
+
+
+![Package demo](screenshot.png)
+
+**Refer to [example folder](example/README.md) and the source code for more information.**

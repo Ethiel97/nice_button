@@ -41,18 +41,22 @@ class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 NiceButton(
-                  width: 255,
+                  // width: 515,
                   elevation: 8.0,
                   radius: 52.0,
                   text: "Login",
                   background: firstColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    print("hello");
+                  },
                 ),
                 NiceButton(
                   mini: true,
                   icon: Icons.home,
                   background: firstColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    print("hello");
+                  },
                 ),
                 NiceButton(
                   elevation: 5,
