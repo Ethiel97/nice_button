@@ -4,4 +4,8 @@
 
 ## [0.1.1] 
 
--Format code and some minor changes
+- Format code and some minor changes
+
+## [0.1.1.1]
+
+ - Update the documentation and some minor changes
