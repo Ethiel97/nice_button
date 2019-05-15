@@ -10,7 +10,7 @@ Add the following to pubspec.yaml
 ```yaml
 dependencies:
   ...
-  nice_button: ^0.1.1.1
+  nice_button: ^0.1.2
 ```
 
 ## Usage Example
