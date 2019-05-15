@@ -18,7 +18,7 @@ dependencies:
 import nice_button.dart
 
 ```dart
-import 'package:nice_button/NiceButton.dart';
+import 'package:nice_button/nice_button.dart';
 ```
 
 ### For normal buttons
