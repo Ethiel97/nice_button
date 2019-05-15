@@ -2,7 +2,7 @@
 
 [Get the package](https://pub.dartlang.org/packages/nice_button)
 
-A Flutter package to design nice buttons in Flutter
+A Flutter package for Android and IOS to design nice buttons with no hassle in your app
 
 ## Installation
 
@@ -10,7 +10,7 @@ Add the following to pubspec.yaml
 ```yaml
 dependencies:
   ...
-  nice_button: ^0.0.1
+  nice_button: ^0.1.0
 ```
 
 ## Usage Example
