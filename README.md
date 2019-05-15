@@ -10,7 +10,7 @@ Add the following to pubspec.yaml
 ```yaml
 dependencies:
   ...
-  nice_button: ^0.1.1
+  nice_button: ^0.1.1.1
 ```
 
 ## Usage Example
@@ -29,7 +29,7 @@ NiceButton(
     elevation: 8.0,
     radius: 52.0,
     text: "Login",
-    background: firstColor,
+    background: yourColor,
     onPressed: () {
         print("hello");
         },
@@ -44,7 +44,7 @@ Icon is required in this case
 NiceButton(
     mini: true,
     icon: Icons.home,
-    background: firstColor,
+    background: yourColor,
     onPressed: () {
         print("hello");
     },
