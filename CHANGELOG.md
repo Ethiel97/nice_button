@@ -13,3 +13,10 @@
  ## [0.1.3]
 
  - Update package description to provide more info
+
+ ## [0.1.4]
+
+ - Remove 'new' reserved keyword (this is not necessary since Dart 2.0)
+ - Dart Style Guide says "Don't initialize variables to null"
+ - Upgrade SDK version to 2.2 (Now you can use spread operators)
+ - Some basic refactoring to improve code reusability and make easy to read
