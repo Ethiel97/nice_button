@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Nice Button Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(),
+      home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   @override
   MyHomePageState createState() {
-    return new MyHomePageState();
+    return MyHomePageState();
   }
 }
 
@@ -28,16 +28,16 @@ class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: firstColor,
-        title: new Text('Nice Button Demo'),
+        title: Text('Nice Button Demo'),
       ),
-      body: new Material(
-        child: new Center(
+      body: Material(
+        child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 NiceButton(
