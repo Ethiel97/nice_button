@@ -53,12 +53,58 @@ class NiceButton extends StatelessWidget {
       this.icon})
       : super(key: key);
 
+  bool get existGradientColors => gradientColors.length > 0;
+
+  LinearGradient get linearGradient => existGradientColors ? LinearGradient(
+    colors: gradientColors,
+    begin: Alignment.topLeft,
+    end: Alignment.topRight
+  ) : LinearGradient(colors: [background, background]);
+
+  BoxDecoration get boxDecoration => BoxDecoration(
+    gradient: linearGradient,
+    borderRadius: BorderRadius.circular(radius),
+    color: background
+  );
+
+  TextStyle get textStyle => TextStyle(
+    fontFamily: 'Montserrat',
+    color: textColor,
+    fontSize: 23.0,
+    fontWeight: FontWeight.bold
+  );
+
+  Widget createContainer(BuildContext context) => mini
+    ? Container(
+        decoration: boxDecoration,
+        width: 65.0,
+        height: 65.0,
+        child: Icon(icon, color: Colors.white,),
+      )
+    : Container(
+      padding: padding,
+      decoration: boxDecoration,
+      constraints: BoxConstraints(
+        maxWidth: width ?? MediaQuery.of(context).size.width / 1.5
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text(text, textAlign: TextAlign.center, style: textStyle,),
+          if (icon != null)
+            Icon(icon,color: Colors.white,),
+        ],
+      ),
+    );
+
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(radius)
+      ),
       onPressed: onPressed,
       child: Material(
         color: Colors.transparent,
@@ -66,71 +112,7 @@ class NiceButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(radius),
         key: key,
         elevation: elevation,
-        child: mini
-            ? Container(
-                decoration: BoxDecoration(
-                    gradient: gradientColors.length > 0
-                        ? LinearGradient(
-                            colors: gradientColors,
-                            begin: Alignment.topLeft,
-                            end: Alignment.topRight)
-                        : LinearGradient(colors: [background, background]),
-                    borderRadius: BorderRadius.circular(radius),
-                    color: background),
-                width: 65.0,
-                height: 65.0,
-                child: Icon(
-                  icon,
-                  color: Colors.white,
-                ),
-              )
-            : Container(
-                padding: padding,
-                decoration: BoxDecoration(
-                    color: background,
-                    borderRadius: BorderRadius.circular(radius),
-                    gradient: gradientColors.length > 0
-                        ? LinearGradient(
-                            colors: gradientColors,
-                            begin: Alignment.topLeft,
-                            end: Alignment.topRight)
-                        : LinearGradient(colors: [background, background])),
-                constraints: BoxConstraints(
-                  maxWidth: width ?? MediaQuery.of(context).size.width / 1.5,
-                  // maxWidth: MediaQuery.of(context).size.width / 1.2
-                ),
-                child: Center(
-                  child: icon == null
-                      ? Text(
-                          text,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              color: textColor,
-                              fontSize: 23.0,
-                              fontWeight: FontWeight.bold),
-                        )
-                      : Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              text,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  color: textColor,
-                                  fontSize: 23.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Icon(
-                              icon,
-                              color: Colors.white,
-                            ),
-                          ],
-                        ),
-                ),
-              ),
+        child: createContainer(context),
       ),
     );
   }
