@@ -38,6 +38,9 @@ class NiceButton extends StatelessWidget {
   /// `mini` tag is used to switch from a full-width button to a small button
   final bool mini;
 
+  /// This is the font size of the text
+  final double fontSize;
+
   const NiceButton (
       {Key key,
       this.mini = false,
@@ -50,7 +53,8 @@ class NiceButton extends StatelessWidget {
       @required this.text,
       @required this.background,
       this.gradientColors = const [],
-      this.icon})
+      this.icon,
+      this.fontSize = 23.0})
       : super(key: key);
 
   bool get existGradientColors => gradientColors.length > 0;
@@ -70,7 +74,7 @@ class NiceButton extends StatelessWidget {
   TextStyle get textStyle => TextStyle(
     fontFamily: 'Montserrat',
     color: textColor,
-    fontSize: 23.0,
+    fontSize: fontSize,
     fontWeight: FontWeight.bold
   );
 
