@@ -20,3 +20,8 @@
  - Dart Style Guide says "Don't initialize variables to null"
  - Upgrade SDK version to 2.2 (Now you can use spread operators)
  - Some basic refactoring to improve code reusability and make easy to read
+
+
+## [0.1.5]
+ - Add fontSize parameter to button
+ 
