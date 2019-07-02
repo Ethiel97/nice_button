@@ -68,6 +68,6 @@ NiceButton(
 ```
 
 
-![Package demo](screenshot.png)
+![Package demo](screenshot.png) 
 
 **Refer to [example folder](example/README.md) and the source code for more information.**
