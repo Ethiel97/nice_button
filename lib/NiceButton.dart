@@ -8,6 +8,9 @@ class NiceButton extends StatelessWidget {
   /// User can use Flutter built-in Icons or font-awesome flutter's Icon  final bool mini;
   final IconData icon;
 
+  /// specify the color of the icon
+  final Color iconColor;
+
   /// radius can be used to specify the button border radius
   final double radius;
 
@@ -47,6 +50,7 @@ class NiceButton extends StatelessWidget {
       this.radius = 4.0,
       this.elevation = 1.8,
       this.textColor = Colors.white,
+      this.iconColor = Colors.white,
       this.width,
       this.padding = const EdgeInsets.all(12.0),
       @required this.onPressed,
@@ -82,10 +86,7 @@ class NiceButton extends StatelessWidget {
           decoration: boxDecoration,
           width: 65.0,
           height: 65.0,
-          child: Icon(
-            icon,
-            color: Colors.white,
-          ),
+          child: Icon(icon, color: iconColor ?? Colors.white),
         )
       : Container(
           padding: padding,
