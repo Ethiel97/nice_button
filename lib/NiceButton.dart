@@ -84,8 +84,8 @@ class NiceButton extends StatelessWidget {
   Widget createContainer(BuildContext context) => mini
       ? Container(
           decoration: boxDecoration,
-          width: 65.0,
-          height: 65.0,
+          width: width ?? 65.0,
+          height: width ?? 65.0,
           child: Icon(icon, color: iconColor ?? Colors.white),
         )
       : Container(

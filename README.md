@@ -1,6 +1,7 @@
 # nice_button
 
-![Pub](https://img.shields.io/pub/v/nice_button.svg)
+[![pub package](https://img.shields.io/pub/v/nice_button.svg)](https://img.shields.io/badge/Donate-PayPal-green.svg) 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/devEnthusiast?locale.x=en_US) 
 
 A Flutter package for Android and IOS to design nice buttons with no hassle in your app. Enjoy !
 
@@ -10,7 +11,7 @@ Add the following to pubspec.yaml
 ```yaml
 dependencies:
   ...
-  nice_button: ^0.1.6
+  nice_button: ^0.1.7
 ```
 
 ## Usage Example

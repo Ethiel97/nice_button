@@ -29,3 +29,6 @@
 ## [0.1.6]
  - Add iconColor parameter to button
  
+## [0.1.7]
+ - you can set custom width for mini buttons
+ 
