@@ -43,6 +43,9 @@ class NiceButton extends StatelessWidget {
 
   /// This is the font size of the text
   final double fontSize;
+  
+  //This is the family of the font
+  final String fontFamily;
 
   const NiceButton(
       {Key key,
@@ -56,6 +59,7 @@ class NiceButton extends StatelessWidget {
       @required this.onPressed,
       @required this.text,
       @required this.background,
+      this.fontFamily
       this.gradientColors = const [],
       this.icon,
       this.fontSize = 23.0})
