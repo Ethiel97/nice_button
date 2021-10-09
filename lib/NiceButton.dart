@@ -30,7 +30,7 @@ class NiceButton extends StatelessWidget {
   final double width;
 
   /// Here user can define what to do when the button is clicked or pressed
-  final Function onPressed;
+  final VoidCallback onPressed;
 
   /// This is the elevation of the button
   final double elevation;
@@ -45,19 +45,19 @@ class NiceButton extends StatelessWidget {
   final double fontSize;
 
   const NiceButton(
-      {Key key,
+      {Key? key,
       this.mini = false,
       this.radius = 4.0,
       this.elevation = 1.8,
       this.textColor = Colors.white,
       this.iconColor = Colors.white,
-      this.width,
+      required this.width,
       this.padding = const EdgeInsets.all(12.0),
-      @required this.onPressed,
-      @required this.text,
-      @required this.background,
+      required this.onPressed,
+      required this.text,
+      required this.background,
       this.gradientColors = const [],
-      this.icon,
+      required this.icon,
       this.fontSize = 23.0})
       : super(key: key);
 
