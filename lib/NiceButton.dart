@@ -9,7 +9,7 @@ class NiceButton extends StatelessWidget {
   final IconData icon;
 
   /// specify the color of the icon
-  final Color iconColor;
+    Color iconColor=Colors.white;
 
   /// radius can be used to specify the button border radius
   final double radius;
@@ -44,13 +44,13 @@ class NiceButton extends StatelessWidget {
   /// This is the font size of the text
   final double fontSize;
 
-  const NiceButton(
+   NiceButton(
       {Key? key,
       this.mini = false,
       this.radius = 4.0,
       this.elevation = 1.8,
       this.textColor = Colors.white,
-      this.iconColor = Colors.white,
+      this.iconColor =Colors.white,
       this.width,
       this.padding = const EdgeInsets.all(12.0),
       required this.onPressed,
