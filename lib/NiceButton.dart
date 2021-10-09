@@ -27,7 +27,7 @@ class NiceButton extends StatelessWidget {
   final Color background;
 
   /// User can define the width of the button
-  final double width;
+  final double? width;
 
   /// Here user can define what to do when the button is clicked or pressed
   final VoidCallback onPressed;
@@ -51,10 +51,10 @@ class NiceButton extends StatelessWidget {
       this.elevation = 1.8,
       this.textColor = Colors.white,
       this.iconColor = Colors.white,
-      required this.width,
+      this.width,
       this.padding = const EdgeInsets.all(12.0),
       required this.onPressed,
-      required this.text,
+      this.text = '',
       required this.background,
       this.gradientColors = const [],
       required this.icon,
