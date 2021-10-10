@@ -13,7 +13,13 @@ dependencies:
   ...
   nice_button: ^0.1.7
 ```
+for null safety
+'''yaml
+ nice_button: 
+   git:
+      url: https://github.com/lavahasif/nice_button.git
 
+'''
 ## Usage Example
 
 import nice_button.dart
